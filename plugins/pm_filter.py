@@ -67,7 +67,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @YDMovieZone</b>")
+            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - https://t.me/+xu2UekR9bsc3ZmY9</b>")
 
 # @Client.on_message(filters.private & filters.text & filters.incoming)
 # async def pm_text(bot, message):
@@ -963,7 +963,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                     InlineKeyboardButton('📋 Rᴇǫᴜᴇsᴛ Gʀᴏᴜᴘ', url=SPRT_CHNL),
                                     InlineKeyboardButton('🔔 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                                 ],[
-                                    InlineKeyboardButton("🌿 Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🥀", url="telegram.me/YDMovieZone")
+                                    InlineKeyboardButton("🌿 Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🥀", url="telegram.me/+xu2UekR9bsc3ZmY9")
                                 ]
                                 ]
                             )
@@ -1305,7 +1305,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("🌿 Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🥀", url="telegram.me/YDMovieZone")
+                 InlineKeyboardButton("🌿 Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🥀", url="telegram.me/+xu2UekR9bsc3ZmY9")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1330,7 +1330,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("🌿 Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🥀", url="telegram.me/YDMovieZone")
+                 InlineKeyboardButton("🌿 Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🥀", url="telegram.me/+xu2UekR9bsc3ZmY9")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1828,7 +1828,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await client.edit_message_media(
                 query.message.chat.id, 
                 query.message.id, 
-                InputMediaPhoto("https://graph.org/file/1f8329497fc99cf66d9dd.jpg")
+                InputMediaPhoto(random.choice(PICS))
             )
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
