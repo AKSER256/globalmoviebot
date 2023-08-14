@@ -38,16 +38,16 @@ auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001760292849')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1001962963502')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001831605064')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "YourDemandZone")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'YourDemandZone')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://W:W@cluster0.33mp7v9.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "GlobalMovie")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'GlobalMovie')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
@@ -58,14 +58,14 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/YDMovieZone')
-SPRT_CHNL = environ.get('SPRT_CHNL', 'https://t.me/YourDemandSupport')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/YourDemandZone')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+xu2UekR9bsc3ZmY9')
+SPRT_CHNL = environ.get('SPRT_CHNL', 'https://t.me/+IePiT_X2nq9hZDVl')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+58vVLUgZ7F1mNzJl')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/YourDemandZone')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/YourDemandZone')
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/+xu2UekR9bsc3ZmY9')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001657638670'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001816882822'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'YourDemandSupport')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
